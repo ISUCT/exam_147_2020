@@ -7,7 +7,7 @@ namespace ExamApp
             this.X = 0;
             this.Y = 0;
         }
-        public override string Name { get; set; } = "Λΰδόÿ";
+        public override string Name { get; set; } = "Π›Π°Π΄ΡΡ";
         public override void Move()
         {
             this.Y += 2;
