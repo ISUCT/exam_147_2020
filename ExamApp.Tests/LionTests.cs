@@ -8,12 +8,13 @@ namespace ExamApp.Tests
         [Fact]
         public void ZeroParameters()
         {
-            Lion lion = new Lion();
+            Lion simba = new Lion();
             string location = simba.Location;
             string boundaries = simba.Boundaries;
             Assert.Equal("World",location);
             Assert.Equal("Unknown",boundaries);
         }
+        [Fact]
         public void Create()
         {
             Lion simba = new Lion("Африка","Саванны");
@@ -22,6 +23,7 @@ namespace ExamApp.Tests
             Assert.Equal("Африка", location);
             Assert.Equal("Саванны", boundaries);
         }
+        [Fact]
         public void TestMethods()
         {
             Lion simba = new Lion("Африка","Саванны");
