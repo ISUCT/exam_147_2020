@@ -11,7 +11,7 @@ namespace AppTest
         {
             Duck2 donald = new Duck2();
             string s = Duck2.swim();
-            Assert.Equal("Утка плавает по озеру", s);
+            Assert.Equal("Утка плавает", s);
         }
 
         [Fact]
