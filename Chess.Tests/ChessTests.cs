@@ -19,7 +19,7 @@ namespace Chess.Tests
         {
             Figure figure = new Knight("Черный");
             Figure figure1 = new Rook("Белый");
-            Assert.Equal("Фигура Конь (Черный) съедает Ладья (Белый)", figure.Eat(figure1));
+            Assert.Equal("Фигура Конь (Черный) съедает Ладья (БелыйфФигура Конь (Черный) съедает Ладья (Белый)", figure.Eat(figure1));
         }
 
         [Fact]
