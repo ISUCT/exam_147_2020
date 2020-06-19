@@ -28,7 +28,7 @@ namespace Anagrams
         {
             if(firstWord.Length != secondWord.Length)
             {
-                return "Слова не равной длинны";
+                return "Слова разной длинны";
             }
 
             int result = 0;
@@ -41,14 +41,7 @@ namespace Anagrams
             {
                 if(letters1.ContainsKey(chr))
                 {
-                    if(letters1[chr] != letters2[chr])
-                    {
-                        stringLength += letters2[chr] - letters1[chr];
-                        if(stringLength == firstWord.Length)
-                        {
-                            result += Math.Abs(letters2[chr] - letters1[chr]);
-                        }
-                    }
+                
                 }
                 else
                 {
