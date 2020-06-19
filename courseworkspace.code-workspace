@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "Chess"
+		},
+		{
+			"path": "Chess.Tests"
+		}
+	],
+	"settings": {}
+}
