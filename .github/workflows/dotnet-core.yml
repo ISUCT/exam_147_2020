@@ -25,5 +25,5 @@ jobs:
         dotnet build --configuration Release
     - name: Test
       run: |
-        cd CourseApp.Tests
+        cd ExamApp.Tests
         dotnet test
