@@ -13,13 +13,13 @@ namespace Anagrams.Tests
         }
 
         [Fact]
-        public void WordsCarAndCoz()
+        public void WordsAcceptAndExcept()
         {
             Assert.Equal("Следует заменить 2 букв(-ы)" ,Program.Anagrams("accept", "except"));
         }
 
         [Fact]
-        public void WordsCarsAndCat()
+        public void WordsAffectAndEffect()
         {
             Assert.Equal("Данные слова уже являются анаграммами" ,Program.Anagrams("affect", "effect"));
         }
@@ -37,13 +37,13 @@ namespace Anagrams.Tests
         }
 
         [Fact]
-        public void WordsDarkAndYyyy()
+        public void WordsCurrentAndCurrant()
         {
             Assert.Equal("Следует заменить 1 букв(-ы)" ,Program.Anagrams("current", "currant"));
         }
 
         [Fact]
-        public void WordsAgarAndGras()
+        public void WordsAgarAndTime()
         {
             Assert.Equal("Следует заменить 4 букв(-ы)" ,Program.Anagrams("agar", "time"));
         }
