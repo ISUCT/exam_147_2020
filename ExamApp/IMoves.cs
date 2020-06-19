@@ -1,9 +1,7 @@
 namespace ExamApp
 {
-public interface IMoves
-{
-    void Move();
-
-    void Eat(Chessmen who);
-}
+    public interface IMove
+    {
+        void Move(Chessmen who);
+    }
 }

@@ -24,7 +24,7 @@ namespace ExamApp.Tests
         public void CurrMoveTest()
         {
             var a = new Knight();
-            a.Move();
+            a.MakeAMove();
             Assert.Equal(3, a.X);
         }
 

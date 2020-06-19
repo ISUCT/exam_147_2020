@@ -7,7 +7,9 @@ namespace ExamApp
         static void Main(string[] args)
         {
             var a = new Bishop();
-            Console.WriteLine(a.X);
+            Console.WriteLine(a.Y);
+            a.MakeAMove();
+            Console.WriteLine(a.Y);
             Console.WriteLine("Hello World!");
         }
     }

@@ -1,11 +1,16 @@
+using System.Collections.Generic;
+using System;
 
 namespace ExamApp
 {
-    public abstract class Chessmen : IMoves
+    public abstract class Chessmen
     {
+        Random rnd = new Random();
         int x, y;
-        public bool IsAlive{get;set;} = true;
+        public bool IsAlive { get; set; } = true;
         public abstract string Name { get; set; }
+        protected List<IMove> Moves { get; set; }
+
         public int X
         {
             get { return this.x; }
@@ -24,11 +29,13 @@ namespace ExamApp
                 else throw new System.ArgumentOutOfRangeException("uncorrect value");
             }
         }
-        public abstract void Move();
-
         public void Eat(Chessmen who)
         {
             who.IsAlive = false;
+        }
+        public void MakeAMove()
+        {
+            this.Moves[rnd.Next(0, Moves.Count)].Move(this);
         }
     }
 }
