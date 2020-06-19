@@ -7,7 +7,7 @@ namespace App
         float speedFly = 50.0F;
         public float SpeedFly => speedFly; // св-во доступно только для чтения
         public float Distance { get; set; }
-        public virtual string Quack() // доступное для переопределения virtual метод
+        public virtual string Quack() // доступный для переопределения virtual метод
         {
             return "Кря Кря Кря Кря";
         }
