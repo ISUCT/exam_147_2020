@@ -9,44 +9,44 @@ namespace Chess.Tests
         [Fact]
         public void PawnEatsRookTest()
         {
-            Figure figure = new Pawn("Белый");
-            Figure figure1 = new Rook("Черный");
-            Assert.Equal("Фигура Пешка (Белый) съедает Ладья (Черный)", figure.Eat(figure1));
+            Figure figure = new Pawn("Р‘РµР»С‹Р№");
+            Figure figure1 = new Rook("Р§РµСЂРЅС‹Р№");
+            Assert.Equal("Р¤РёРіСѓСЂР° РџРµС€РєР° (Р‘РµР»С‹Р№) СЃСЉРµРґР°РµС‚ Р›Р°РґСЊСЏ (Р§РµСЂРЅС‹Р№)", figure.Eat(figure1));
         }
 
         [Fact]
         public void KnightEatsRookTest()
         {
-            Figure figure = new Knight("Черный");
-            Figure figure1 = new Rook("Белый");
-            Assert.Equal("Фигура Конь (Черный) съедает Ладья (Белый)", figure.Eat(figure1));
+            Figure figure = new Knight("Р§РµСЂРЅС‹Р№");
+            Figure figure1 = new Rook("Р‘РµР»С‹Р№");
+            Assert.Equal("Р¤РёРіСѓСЂР° РљРѕРЅСЊ (Р§РµСЂРЅС‹Р№) СЃСЉРµРґР°РµС‚ Р›Р°РґСЊСЏ (Р‘РµР»С‹Р№)", figure.Eat(figure1));
         }
 
         [Fact]
         public void RookEatsPawnTest()
         {
-            Figure figure = new Rook("Черный");
-            Figure figure1 = new Pawn("Белый");
-            Assert.Equal("Фигура Ладья (Черный) съедает Пешка (Белый)", figure.Eat(figure1));
+            Figure figure = new Rook("Р§РµСЂРЅС‹Р№");
+            Figure figure1 = new Pawn("Р‘РµР»С‹Р№");
+            Assert.Equal("Р¤РёРіСѓСЂР° Р›Р°РґСЊСЏ (Р§РµСЂРЅС‹Р№) СЃСЉРµРґР°РµС‚ РџРµС€РєР° (Р‘РµР»С‹Р№)", figure.Eat(figure1));
         }
 
         [Fact]
         public void SameColorTest()
         {
-            Figure figure = new Rook("Черный");
-            Figure figure1 = new Pawn("Черный");
-            Assert.Equal("Нельзя съесть фигуру того же цвета", figure.Eat(figure1));
+            Figure figure = new Rook("Р§РµСЂРЅС‹Р№");
+            Figure figure1 = new Pawn("Р§РµСЂРЅС‹Р№");
+            Assert.Equal("РќРµР»СЊР·СЏ СЃСЉРµСЃС‚СЊ С„РёРіСѓСЂСѓ С‚РѕРіРѕ Р¶Рµ С†РІРµС‚Р°", figure.Eat(figure1));
         }
 
         [Fact]
         public void WalksTest()
         {
-            Figure figure = new Pawn("Черный");
-            Figure figure1 = new Rook("Черный");
-            Figure figure2 = new Knight("Черный");
-            Assert.Equal("Пешка ходит по прямой на одну клетку, при старте может сходиться на две клетки", figure.Walk());
-            Assert.Equal("Ладья ходит прямо по вертикали и горизонтали в обе стороны", figure1.Walk());
-            Assert.Equal("Конь ходит буквой Г, передвигаясь на две клетки и затем сворачивая на одно поле налево или направо", figure2.Walk());
+            Figure figure = new Pawn("Р§РµСЂРЅС‹Р№");
+            Figure figure1 = new Rook("Р§РµСЂРЅС‹Р№");
+            Figure figure2 = new Knight("Р§РµСЂРЅС‹Р№");
+            Assert.Equal("РџРµС€РєР° С…РѕРґРёС‚ РїРѕ РїСЂСЏРјРѕР№ РЅР° РѕРґРЅСѓ РєР»РµС‚РєСѓ, РїСЂРё СЃС‚Р°СЂС‚Рµ РјРѕР¶РµС‚ СЃС…РѕРґРёС‚СЊСЃСЏ РЅР° РґРІРµ РєР»РµС‚РєРё", figure.Walk());
+            Assert.Equal("Р›Р°РґСЊСЏ С…РѕРґРёС‚ РїСЂСЏРјРѕ РїРѕ РІРµСЂС‚РёРєР°Р»Рё Рё РіРѕСЂРёР·РѕРЅС‚Р°Р»Рё РІ РѕР±Рµ СЃС‚РѕСЂРѕРЅС‹", figure1.Walk());
+            Assert.Equal("РљРѕРЅСЊ С…РѕРґРёС‚ Р±СѓРєРІРѕР№ Р“, РїРµСЂРµРґРІРёРіР°СЏСЃСЊ РЅР° РґРІРµ РєР»РµС‚РєРё Рё Р·Р°С‚РµРј СЃРІРѕСЂР°С‡РёРІР°СЏ РЅР° РѕРґРЅРѕ РїРѕР»Рµ РЅР°Р»РµРІРѕ РёР»Рё РЅР°РїСЂР°РІРѕ", figure2.Walk());
         }
     }
 }
